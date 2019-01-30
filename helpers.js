@@ -25,7 +25,7 @@ function getTodosFromFile(path) {
 
 function matchComment(line) {
   return line.match(
-    /\/{2}\s?todo\s*[\s|:]\s*(([A-Za-zа-яА-я ]+\s*|\s?);\s*(\d{4}-\d{2}-\d{2}|\s*);)?\s*([A-Za-zа-яА-я ]+.+)/i,
+    /\/{2}\s?todo\s*[\s|:]\s*(([A-Za-zа-яА-я ]+\s*|\s?);\s*(\d{4}-\d{2}-\d{2}|\s?)\s*;)?\s*([A-Za-zа-яА-я 0-9!?\.,]+[^;]$)/i,
   );
 }
 
